@@ -184,50 +184,6 @@ void SimpleEQ2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     auto& rightLowCut = rightChain.get<ChainPositions::LowCut>();
     updateCutFilter(rightLowCut, cutCoefficients, chainSettings.lowCutSlope);
     
-//    rightLowCut.setBypassed<0>(true);
-//    rightLowCut.setBypassed<1>(true);
-//    rightLowCut.setBypassed<2>(true);
-//    rightLowCut.setBypassed<3>(true);
-//    switch ( chainSettings.lowCutSlope)
-//    {
-//        case Slope_12:
-//        {
-//            *rightLowCut.get<0>().coefficients = *cutCoefficients[0];
-//            rightLowCut.setBypassed<0>(false);
-//            break;
-//        }
-//        case Slope_24:
-//        {
-//            *rightLowCut.get<0>().coefficients = *cutCoefficients[0];
-//            rightLowCut.setBypassed<0>(false);
-//            *rightLowCut.get<1>().coefficients = *cutCoefficients[1];
-//            rightLowCut.setBypassed<1>(false);
-//            break;
-//        }
-//        case Slope_36:
-//        {
-//            *rightLowCut.get<0>().coefficients = *cutCoefficients[0];
-//            rightLowCut.setBypassed<0>(false);
-//            *rightLowCut.get<1>().coefficients = *cutCoefficients[1];
-//            rightLowCut.setBypassed<1>(false);
-//            *rightLowCut.get<2>().coefficients = *cutCoefficients[2];
-//            rightLowCut.setBypassed<2>(false);
-//            break;
-//        }
-//        case Slope_48:
-//        {
-//            *rightLowCut.get<0>().coefficients = *cutCoefficients[0];
-//            rightLowCut.setBypassed<0>(false);
-//            *rightLowCut.get<1>().coefficients = *cutCoefficients[1];
-//            rightLowCut.setBypassed<1>(false);
-//            *rightLowCut.get<2>().coefficients = *cutCoefficients[2];
-//            rightLowCut.setBypassed<2>(false);
-//            *rightLowCut.get<3>().coefficients = *cutCoefficients[3];
-//            rightLowCut.setBypassed<3>(false);
-//            break;
-//        }
-//
-//    }
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
     // Make sure to reset the state if your inner loop is processing
