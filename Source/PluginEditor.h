@@ -19,6 +19,11 @@ struct CustomRotarySlider : juce::Slider
     }
 };
 
+//void updateCoefficients(Coefficients& old, const Coefficients& replacements)
+//{
+//    *old = *replacements;
+//}
+
 //==============================================================================
 /**
 */
