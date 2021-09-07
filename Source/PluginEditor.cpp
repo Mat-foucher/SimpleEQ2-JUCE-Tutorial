@@ -129,6 +129,21 @@ void SimpleEQ2AudioProcessorEditor::resized()
     peakQualitySlider.setBounds(bounds);
 }
 
+void SimpleEQ2AudioProcessorEditor::parameterValueChanged(int parameterIndex, float newValue)
+{
+    parametersChanged.set(true);
+}
+
+void SimpleEQ2AudioProcessorEditor::timerCallback()
+{
+    if (parametersChanged.compareAndSetBool(false, true))
+    {
+        //Update MonoChain:
+        //signal repaint:
+        
+    }
+}
+
 std::vector<juce::Component*> SimpleEQ2AudioProcessorEditor::getComps()
 {
     return
