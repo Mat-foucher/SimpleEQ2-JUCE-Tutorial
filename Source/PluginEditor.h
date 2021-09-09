@@ -8,11 +8,14 @@
 
 #pragma once
 
+
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
+
 struct LookAndFeel : juce::LookAndFeel_V4
 {
+
     void drawRotarySlider (juce::Graphics&,
                            int x, int y, int width, int height,
                            float sliderPosProportional,
@@ -38,7 +41,7 @@ struct RotarySliderWithLabels : juce::Slider
     void paint(juce::Graphics& g) override { }
     juce::Rectangle<int> getSliderBounds() const;
     int getTextHeight() const { return 14; }
-    juce::String getDisplayString();
+    juce::String getDisplayString() const;
     
 private:
     LookAndFeel lnf;
@@ -113,3 +116,5 @@ private:
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleEQ2AudioProcessorEditor)
 };
+
+
