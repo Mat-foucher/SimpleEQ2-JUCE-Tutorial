@@ -109,7 +109,7 @@ private:
     
     std::vector<juce::Component*> getComps();
     
-<<<<<<< HEAD
+
     MonoChain monoChain;
     
     

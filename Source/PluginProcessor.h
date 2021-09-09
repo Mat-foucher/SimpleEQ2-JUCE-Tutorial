@@ -41,8 +41,7 @@ enum ChainPositions
     HighCut
 };
 
-<<<<<<< HEAD
-=======
+p
 using Coefficients = Filter::CoefficientsPtr;
 
 void updateCoefficients(Coefficients& old, const Coefficients& replacements);
@@ -153,8 +152,7 @@ private:
     
     MonoChain leftChain, rightChain;
     
-<<<<<<< HEAD
-=======
+
     
 >>>>>>> gui-dials
     
