@@ -95,6 +95,11 @@ void RotarySliderWithLabels::paint(juce::Graphics &g)
     auto range = getRange();
 
     auto sliderBounds = getSliderBounds();
+    
+    g.setColour(Colours::red);
+    g.drawRect(getLocalBounds());
+    g.setColour(Colours::yellow);
+    g.drawRect(sliderBounds);
 
     getLookAndFeel().drawRotarySlider(g,
                                       sliderBounds.getX(),
@@ -329,7 +334,7 @@ SimpleEQ2AudioProcessorEditor::SimpleEQ2AudioProcessorEditor (SimpleEQ2AudioProc
     // editor's size to whatever you need it to be.
     
     peakFreqSlider.labels.add({0.f, "20Hz"});
-    peakFreqSlider.labels.add({1.f, "20Hz"});
+    peakFreqSlider.labels.add({1.f, "20kHz"});
     
     for(auto* comp : getComps())
     {
