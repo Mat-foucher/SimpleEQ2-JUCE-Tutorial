@@ -68,13 +68,14 @@ void LookAndFeel::drawRotarySlider (juce::Graphics & g,
 
     Path p;
 
-    Rectangle<float> r;
-    r.setLeft(center.getX() - 2);
-    r.setRight(center.getX() + 2);
-    r.setTop(bounds.getY());
-    r.setBottom(center.getY());
-
-    p.addRectangle(r);
+    // Long Dials:
+//    Rectangle<float> r;
+//    r.setLeft(center.getX() - 2);
+//    r.setRight(center.getX() + 2);
+//    r.setTop(bounds.getY());
+//    r.setBottom(center.getY());
+//
+//    p.addRectangle(r);
 
     jassert(rotaryStartAngle < rotaryEndAngle);
 
